@@ -1,2 +1,1 @@
-# animation loader
- i will go 
+ - 此项目 为对各种框架和技术的测试使用。

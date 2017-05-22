@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--     <script type="text/javascript" src="../common/libs/jquery.min.js"></script> -->
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+		  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+		  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+		</div>
+		<div class="row">
+		  <div class="col-xs-6 col-sm-4">.col-xs-6 <div class=""></div>col-sm-4</div>
+		  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+		  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+		  <div class="clearfix visible-xs-block"></div>
+		  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+		</div>
+
+	</div>
+	<!--检测是否支持webp-->
+	<!-- <script type="text/javascript">
+		function check_webp_feature(feature, callback) {
+		    var kTestImages = {
+		        lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+		        lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+		        alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+		        animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+		    };
+		    var img = new Image();
+		    img.onload = function () {
+		        var result = (img.width > 0) && (img.height > 0);
+		        callback(feature, result);
+		    };
+		    img.onerror = function () {
+		        callback(feature, false);
+		    };
+		    img.src = "data:image/webp;base64," + kTestImages[feature];
+		}
+		check_webp_feature();
+	</script> -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
