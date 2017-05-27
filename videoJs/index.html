@@ -12,46 +12,57 @@
     <script src="http://www.jq22.com/demo/video-js/js/video.min.js"></script>
 </head>
 <!-- horizontal -->
-<body class="vertical">
-	<!--竖屏V-->
-	<header class="header">
-		<img class="img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAAGUlEQVQokWP8////fwYKABMlmkcNGDYGAAAoRwQOk4n5iQAAAABJRU5ErkJggg==">
-		<div class="fixed">
-			<a href=""></a>
-			<em class="lesson-name"></em>
-<!-- 			<div >
-				
-			</div> -->
-		</div>
-		<video class="dasheng-video" src="libs/video/test.mp4" autoplay="autoplay"></video>
-	</header>
-	
-	<!--section-用户信息 -->
-	<section class="section">
-		<div class="user">
-			<!--头像-->
-			<i class="avatar"></i>
-			<!--姓名-->
-			<em class="name"></em>
-		</div>
-		<!--关注-->
-		<div class="follow">关注</div>
-	</section>
-	
-	<!--chat-content -->
-	<section class="chat-content">
+<body>
+	<section class="vertical">
+		<!--竖屏V-->
+		<header class="header">
+			<img class="img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAAGUlEQVQokWP8////fwYKABMlmkcNGDYGAAAoRwQOk4n5iQAAAABJRU5ErkJggg==">
+			<div class="fixed">
+				<a href=""></a>
+				<em class="lesson-name"></em>
+			</div>
+			<video class="dasheng-video" src="libs/video/test.mp4" autoplay="autoplay"></video>
+		</header>
 		
+		<!--section-用户信息 -->
+		<section class="section">
+			<div class="user">
+				<!--头像-->
+				<i class="avatar"></i>
+				<!--姓名-->
+				<em class="name"></em>
+			</div>
+			<!--关注-->
+			<div class="follow">关注</div>
+		</section>
+		
+		<!--chat-content -->
+		<section class="chat-content">
+			<div class="chatlist">
+
+			</div>
+		</section>
+		
+		<!--固定底部-->
+		<footer class="footer">
+			<div class="chat-btn">
+				<span class="tips">评论</span>
+				<input class="input-text" type="text" placeHolder="吐个槽呗～" name="" >
+				<em class="send">发送</em>
+			</div>
+		</footer>
 	</section>
-	
-	<!--固定底部-->
-	<footer class="footer">
-		<div class="chat-btn">
-			<span class="tips">评论</span>
-			<input class="input-text" type="text" placeHolder="吐个槽呗～" name="" >
-			<em class="send">发送</em>
-		</div>
-	</footer>
 
-
+	<script type="text/javascript" src="libs/js/zepto.min.js"></script>
+	<script type="text/javascript">
+		//监听屏幕尺寸设置大小
+		$(function(){
+			var windowHeight = $(window).height();
+			var sectionHeight = $(".section").height();
+			var videoHeight = $(".header").height();
+			var fixHeight = $(".footer").height();
+			$(".chat-content").height(windowHeight-sectionHeight-videoHeight-fixHeight);
+		});
+	</script>
 	</body>
 </html>

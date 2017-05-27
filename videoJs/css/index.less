@@ -3,14 +3,28 @@
  */
 
 @import  "../libs/css/normalize.less";
-
+body{
+	color: #666666;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 //竖屏 vertical
 //横屏 horizontal
 
 //2倍值
 @basic:2;
 .vertical{
-	background-color: #dddddd;
+	//background-color: #dddddd;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
 	.header{
 		position: relative;
 		top: 0;
@@ -61,10 +75,16 @@
 		}
 	}
 	.chat-content{
-		height: 100%;
 		width: 100%;
+		overflow: hidden;
 		background-color: #ffffff;
 		position: absolute;
+		margin-bottom: 60px;
+		z-index: 99;
+		.chatlist{
+			overflow: auto;
+			height: 100%;
+		}
 	}
 	//底部
 	.footer{
@@ -135,4 +155,27 @@
 			left: 0;
 		}
 	}
+}
+
+@media screen and (orientation:portrait) {
+    //竖屏
+}
+@media screen and (orientation:landscape) {
+    //横屏
+   .vertical{
+   		.header{
+   			background-color: rgba(0, 0, 0, 0.3);
+   		}
+   		.section{
+   			position: fixed;
+   			top: 0;
+   			left: 0;
+   			background-color: rgba(0, 0, 0, 0.3);
+   		}
+
+   		.footer{
+   			display: none;
+			background-color: rgba(0, 0, 0, 0.3);
+   		}
+   }
 }
