@@ -3,9 +3,11 @@
     <router-link to="/two">gototwo </router-link>
     <router-link to="/three">goto three </router-link>
     <div v-for="article in articles" class="text item">
-        <em>{{article.title}}</em>
-        <img v-bind:src='article.images.small'>
-        <div>评分：{{article.rating.average}}</div>
+        <img class="img" v-bind:src='article.images.small'>
+        <div class="txt">
+            <em class="name">{{article.title}}</em>
+            <div class="average">评分：{{article.rating.average}}</div>
+        </div>
     </div> 
   </div>
 </template> 
@@ -28,6 +30,29 @@ li {
 
 a {
   color: #42b983;
+}
+
+.item{
+    width: 100%;
+    height: 100px;
+}
+
+.item .img{
+    display: block;
+    float: left;
+    width: 65px;
+    height: 100px;
+}
+.txt{
+    display: block;
+    float: left;
+}
+.txt .name{
+    font-style: normal;
+}
+.title{
+    display: block;
+
 }
 </style>
 <script>
